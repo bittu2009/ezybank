@@ -1,0 +1,20 @@
+ [
+    {
+      "accountholder": "Tiger Nixon",
+      "accounttype": "Savings",
+      "amount": "$320,800",
+      "accountid": "1354654"
+    },
+    {
+      "accountholder": "Garrett Winters",
+      "accounttype": "Savings",
+      "amount": "$170,750",
+      "accountid": "2064655"
+    },
+    {
+      "accountholder": "Ashton Cox",
+      "accounttype": "Savings",
+      "amount": "$86,000",
+      "accountid": "20090112"
+    }
+  ]

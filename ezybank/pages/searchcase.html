@@ -1,0 +1,131 @@
+<section class="content">
+
+	<div class="row">
+
+		<div class="col-md-4">
+			<div class="box box-primary">
+				<div class="box-header">
+					<h3 class="box-title">Case Search</h3>
+				</div>
+
+				<div class="box-body">
+					<div class="form-group">
+						<label for="exampleInputEmail1">Customer No</label> <input
+							type="text" class="form-control" placeHolder="">
+					</div>
+
+					<div class="form-group">
+						<label for="exampleInputEmail1">Case Id</label> <input type="text"
+							class="form-control" placeHolder="">
+					</div>
+
+
+					<div class="form-group">
+						<label for="exampleInputEmail1">Case Title</label> <input
+							type="text" class="form-control" placeHolder="">
+					</div>
+
+
+					<div class="form-group">
+						<label for="exampleInputEmail1">Status</label> <select
+							class="form-control">
+							<option value="lf">All</option>
+							<option value="cn">Active</option>
+							<option value="an">InActive</option>
+							<option value="cid">Resolved</option>
+						</select>
+					</div>
+
+					<div class="form-group">
+						<label for="exampleInputEmail1">ResolvedDate</label> <input
+							type="date" class="form-control" placeHolder="">
+					</div>
+					<div class="pull-right">
+						<button class="btn btn-primary btn-sm btn-flat"
+							ng-click="searchCase()">Search Case</button>
+					</div>
+				</div>
+				<div class="box-footer "></div>
+			</div>
+		</div>
+
+		<div>
+			<div class="col-md-8">
+				<div class="box  box-primary">
+					<div class="box-header">
+						<h3 class="box-title">Search Results</h3>
+					</div>
+					<!-- /.box-header -->
+					<div class="box-body table-responsive" ng-show="showResults">
+						<table id="caseResults"
+							class="table responsive table-bordered table-hove" cellspacing="0" width="100%">
+							<thead>
+								<tr>
+									<th data-class="expand">Case Id</th>
+									<th>Customer Name</th>
+									<th>Case Title</th>
+									<th data-hide="phone,tablet">Description</th>
+									<th>Case Status</th>
+									<th>Priority</th>
+								</tr>
+							</thead>
+
+
+						</table>
+					</div>
+					<!-- /.box-body -->
+				</div>
+				<!-- /.box -->
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+var responsiveHelper;
+var breakpointDefinition = {
+    tablet: 1024,
+    phone : 480
+};
+var tableElement = $('#caseResults');
+
+	
+	tableElement.dataTable( {
+    	"sAjaxSource": "jsondata/casedata.json",
+    	"sAjaxDataProp": "",
+    	 "bPaginate": false,
+         "bLengthChange": false,
+         "bFilter": false,
+         "bSort": true, 
+         "bInfo": true,
+         "bAutoWidth": false,
+    	"aoColumns": [
+    	            {"mData" : "caseid"},
+    				{"mData": "customername"},
+    				{"mData": "casetitle"},
+    				{"mData": "description"},
+    				{"mData": "status"},
+    				{"mData": "priority"}
+    	            ],
+    	sPaginationType  : 'bootstrap',
+        oLanguage        : {
+            sLengthMenu: '_MENU_ records per page'
+        },
+
+        // Setup for responsive datatables helper.
+        bAutoWidth       : false,
+        fnPreDrawCallback: function () {
+            // Initialize the responsive datatables helper once.
+            if (!responsiveHelper) {
+                responsiveHelper = new ResponsiveDatatablesHelper(tableElement, breakpointDefinition);
+            }
+        },
+        fnRowCallback  : function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+            responsiveHelper.createExpandIcon(nRow);
+        },
+        fnDrawCallback : function (oSettings) {
+            responsiveHelper.respond();
+        }
+        	
+    } );
+
+</script>

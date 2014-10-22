@@ -1,0 +1,26 @@
+ [
+    {
+      "caseid": "1",
+      "customername": "AK",
+      "casetitle": "Test",
+      "description" :"Address Update",
+      "status": "Active",
+      "priority":"Low"
+    },
+    {
+      "caseid": "2",
+      "customername": "AK",
+      "casetitle": "Test",
+      "description" :"Address Update",
+      "status": "Active",
+      "priority":"Low"
+    },
+    {
+      "caseid": "3",
+      "customername": "AK",
+      "casetitle": "Test",
+      "description" :"Address Update",
+      "status": "Active",
+      "priority":"Low"
+    }
+  ]

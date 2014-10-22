@@ -1,0 +1,34 @@
+ [
+    {
+      "name": "Tiger Nixon",
+      "gender": "Male",
+      "mailid": "a@a.com",
+      "dateofbirth": "2011/04/25",
+      "office": "Edinburgh",
+      "id": "5421"
+    },
+    {
+      "name": "Garrett Winters",
+      "gender": "Male",
+      "mailid": "b@a.com",
+      "dateofbirth": "2011/07/25",
+      "office": "Tokyo",
+      "id": "8422"
+    },
+    {
+      "name": "Ashton Cox",
+      "gender": "Male",
+      "mailid": "c@a.com",
+      "dateofbirth": "2009/01/12",
+      "office": "San Francisco",
+      "id": "1562"
+    },
+    {
+      "name": "Cedric Kelly",
+      "gender": "Female",
+      "mailid": "d@a.com",
+      "dateofbirth": "2012/03/29",
+      "office": "Edinburgh",
+      "id": "6224"
+    }
+  ]

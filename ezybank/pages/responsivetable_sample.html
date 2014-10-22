@@ -1,0 +1,55 @@
+
+	<section class="content">
+       
+ 
+       
+    </table>
+    </section>
+    
+   <script>
+var responsiveHelper;
+var breakpointDefinition = {
+    tablet: 1024,
+    phone : 480
+};
+var tableElement = $('#example');
+
+	
+	tableElement.dataTable( {
+    	"sAjaxSource": "jsondata/accountdata.json",
+    	"sAjaxDataProp": "",
+    	 "bPaginate": true,
+         "bLengthChange": false,
+         "bFilter": false,
+         "bSort": true, 
+         "bInfo": true,
+         "bAutoWidth": false,
+    	"aoColumns": [
+    	            {"mData" : "name"},
+    				{"mData": "position"},
+    				{"mData": "office"},
+    				{"mData": "extn"}
+    	            ],
+    	sPaginationType  : 'bootstrap',
+        oLanguage        : {
+            sLengthMenu: '_MENU_ records per page'
+        },
+
+        // Setup for responsive datatables helper.
+        bAutoWidth       : false,
+        fnPreDrawCallback: function () {
+            // Initialize the responsive datatables helper once.
+            if (!responsiveHelper) {
+                responsiveHelper = new ResponsiveDatatablesHelper(tableElement, breakpointDefinition);
+            }
+        },
+        fnRowCallback  : function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+            responsiveHelper.createExpandIcon(nRow);
+        },
+        fnDrawCallback : function (oSettings) {
+            responsiveHelper.respond();
+        }
+        	
+    } );
+
+</script>

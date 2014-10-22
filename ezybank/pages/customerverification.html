@@ -1,0 +1,189 @@
+
+<section class="content">
+
+
+			<div class="box box-primary">
+			<div class="box box-solid  box-primary">
+				<div class="box-header">
+					<h3 class="box-title">Customer Verification</h3>
+				</div>
+				<div class="box-body">
+					<div class="row">
+						<div class="col-md-6">
+							<label>Customer Id:</label><span class="dropdown pull-right">1234</span>
+						</div>
+						<div class="col-md-6">
+							<label>Customer Name:</label><span class="dropdown pull-right">Kamal</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<label> Account Blockcode : </label> <span
+								class="dropdown pull-right">NORMAL</span>
+						</div>
+
+
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+							<input name="verifytype" type="radio"><label>ByPass validation</label>
+							 
+  					 </div>
+  					 <div class="col-md-6">
+  					 <input type="text" placeholder="Enter reason...">	
+  					 </div>
+						
+					</div>
+					<div class="row">
+						<div class="col-md-2">
+							<input name="verifytype" type="radio"><label>Security
+								question</label>
+						</div>
+						<div class="col-md-2">
+							<label>Identity Cardno:</label>
+						</div>
+						<div class="col-md-2">
+							<input type="checkbox" value="10">3 - Nationalid
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<label>Date of Birth:</label>
+						</div>
+						<div class="col-md-2">
+							<input type="checkbox" value="20">13/11/1970
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<label>Mother's maiden name:</label>
+						</div>
+						<div class="col-md-2">
+							<input type="checkbox" value="30">Corney
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<label>Bill to - address line1:</label>
+						</div>
+						<div class="col-md-2">
+							<input type="checkbox" value="40">Bedok North
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<label>Bill to - address line2:</label>
+						</div>
+						<div class="col-md-2">
+							<input type="checkbox">Tampines
+					</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<label>City:</label>
+						</div>
+						<div class="col-md-2">
+							<input type="checkbox">Bedok
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<label>Home phone no:</label>
+						</div>
+						<div class="col-md-2">
+							<input type="checkbox">81888888
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<label>emailid:</label>
+						</div>
+						<div class="col-md-2">
+							<input type="checkbox">ezy@gmail.com
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<label>Business phone:</label>
+						</div>
+						<div class="col-md-2">
+							<input type="checkbox">9879876
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-2">
+							<label>Company name:</label>
+						</div>
+						<div class="col-md-2">
+							<input type="checkbox" value="20">EZY
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-6">
+							<input name="verifytype" type="radio"><label>Security questions Verified</label>
+						</div>
+					</div>
+				   	<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-6">
+							<input name="verifytype" type="radio"><label>Block</label>
+						</div>
+					</div>
+						<div class="row">
+						<div class="col-md-2"></div>
+						<div class="col-md-6">
+							<input name="verifytype" type="radio"><label>Bad Answer/Suspicious call</label>
+						</div>
+						<div class="col-md-2">
+							<label>Count:</label><span class="dropdown pull-right">1</span>
+						</div>
+					</div>
+					<div class="row">
+					<div class="col-md-6"></div>
+					</div>
+					
+<div class="progress progress-striped active">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        </div>
+    </div>
+					<div class="col-md-2">
+                    <a class="btn btn-primary btn-block" href="#homeidnv/co">OK</a></div>
+                    <div class="col-md-2">
+                    <a class="btn btn-primary btn-block" href="#homeidnv/cs">CANCEL</a>
+                    </div>
+                </div>
+				</div>	
+				</div>
+			</div>
+</section>
+<script type="text/javascript">
+	
+//	$('.progress-bar').css('width', '50%').attr('aria-valuenow', 50);
+	  $(document).ready(function() {
+	
+	        
+          $('input').on('click', function(){
+var valeur = 0;
+$('input:checked').each(function(){
+     if ( $(this).attr('value') > valeur )
+     {
+         valeur =  $(this).attr('value');
+     }
+});
+$('.progress-bar').css('width', valeur+'%').attr('aria-valuenow', valeur);    
+});
+      
+      });
+ 	</script>

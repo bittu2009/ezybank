@@ -3,10 +3,12 @@ var ezyBankModule = angular.module('ezyBankModule',[ 'ui.router','angularUtils.d
 
 ezyBankModule.service('toggleService', function() {
 	this.toggle= function(){
+		$('.row-offcanvas-left').removeClass('active relative');
 		$('.left-side').addClass("collapse-left");
 	    $(".right-side").addClass("strech");
 	};
 	this.untoggle= function(){
+		$('.row-offcanvas-left').addClass('active relative');
 		$('.left-side').removeClass("collapse-left");
 	    $(".right-side").removeClass("strech");
 	};
